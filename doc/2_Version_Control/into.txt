@@ -1,0 +1,63 @@
+1. git commit
+   - Saves staged changes into the local repository history.
+   - Arguments:
+     - -m "message" → add a commit message inline
+     - -a → automatically stage tracked files before committing
+     - --amend → edit the last commit (message and/or content)
+
+2. git branch
+   - Lists, creates, or deletes branches.
+   - Arguments:
+     - (no args) → list local branches
+     - -a → list all branches (local + remote)
+     - <branch-name> → create a new branch
+     - -d <branch-name> → delete a branch safely
+     - -D <branch-name> → force delete a branch
+     - -vv → show local branches with their tracking remotes
+
+3. git checkout
+   - Switches to a branch or restores files.
+   - Arguments:
+     - <branch-name> → switch to a branch
+     - -b <new-branch> → create and switch to a new branch
+     - <commit-hash> → check out a specific commit (detached HEAD)
+
+4. git pull
+   - Updates the current branch by fetching from a remote and then merging (or rebasing).
+   - Arguments:
+     - (no args) → fetch and merge from the tracked remote branch
+     - <remote> <branch> → pull a specific branch from a remote
+     - --rebase → rebase instead of merge after fetching
+
+5. git push
+   - Sends local commits to a remote repository.
+   - Arguments:
+     - (no args) → push current branch to its upstream remote
+     - <remote> <branch> → push a branch explicitly
+     - -u <remote> <branch> → set upstream for future pushes/pulls
+     - --force / -f → force push (overwrites history on remote)
+     - --tags → push all local tags to remote
+
+6. git merge
+   - Combines commits from another branch into the current branch.
+   - Arguments:
+     - <branch> → merge the given branch into the current one
+     - --no-ff → always create a merge commit, even if fast-forward is possible
+     - --abort → stop and revert an in-progress merge
+
+7. git rebase
+   - Re-applies commits from your branch onto another branch (rewrites history).
+   - Arguments:
+     - <branch> → rebase current branch on top of the given branch
+     - -i <commit> → interactive rebase (reorder, squash, edit commits)
+     - --abort → stop and revert an in-progress rebase
+     - --continue → continue after resolving conflicts
+
+8. git fetch
+   - Downloads objects and refs from a remote, but does not merge them.
+   - Arguments:
+     - (no args) → fetch all branches from the default remote
+     - <remote> → fetch from a specific remote
+     - <remote> <branch> → fetch only a specific branch
+     - --all → fetch all remotes
+     - --prune → remove remote-trackin
